@@ -12,18 +12,24 @@ typedef struct {
 
 int main() { 
 
-    Person personen[3] = {
-        {"Lissi", 21, 1.21},
-        {"Tim", 18, 1.90},
-        {"Frut", 60, 1.85}
-    };
-
+    Person personen[3];
     int anzahlPersonen = 3;
 
     for(int i = 0; i < anzahlPersonen; i++) {
-        printf("%s ist %d Jahre alt und %.2fm gross.\n", personen[i].name, personen[i].alter, personen[i].groesse);
+        printf("Name der Person %d: ", i + 1);
+        scanf("%29s", personen[i].name);
+
+        printf("\nAlter der Person %d: ", i + 1);
+        scanf("%d", &personen[i].alter);
+
+        printf("\nGroesse der Person %d: ", i + 1);
+        scanf("%f", &personen[i].groesse);
     }
 
+    printf("\n---Uebersicht---\n");
+    for(int i = 0; i < anzahlPersonen; i++) {
+        printf("%s ist %d Jahre alt und %.2fm gross.\n", personen[i].name, personen[i].alter, personen[i].groesse);
+    }
 
     return 0;
 }
