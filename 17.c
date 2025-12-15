@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-void print_array(int array[], int arrayLaenge) {
+/*void print_array(int array[], int arrayLaenge) {
     for(int i = 0; i < arrayLaenge; i++) {
         printf("%d ", array[i]);
     }
@@ -20,10 +20,23 @@ int main() {
     int zahlenLaenge = 4;
 
     print_array(zahlen, zahlenLaenge);
-
+    
     verdoppeln(zahlen, zahlenLaenge); 
-     
+
     print_array(zahlen, zahlenLaenge);
+
+    return 0;
+}*/
+
+void salute(char nameString[]) {
+    printf("Hallo %s\n", nameString);
+}
+
+int main() {
+
+    char name[] = "Jens"; // Array von 6 Zeichen
+
+    salute(name);
 
     return 0;
 }
