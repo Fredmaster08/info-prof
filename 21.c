@@ -12,12 +12,18 @@
 typedef struct {
     int id;
     char description[MAX_DESC_LENGTH];
-    char assignee[MAX_NAME_LENGTH]
+    char assignee[MAX_NAME_LENGTH];
 }Task;
 
 int loadTasks(Task tasks[]);
 
-void printMainMenu();
+void printMainMenu() {
+    printf("\nTODO-LIST Verwaltung\n");
+    printf("1. Aufgaben anzeigen\n");
+    printf("2. Aufgabe hinzufuegen\n");
+    printf("3. Aufgabe löschen\n");
+    printf("4. Programm beenden\n");
+}
 void listTasks(Task tasks[], int taskCount);
 int addTask(Task tasks[], int taskCount);
 int deleteTask(Task tasks[], int taskCount);
@@ -53,29 +59,24 @@ int main() {
             printf("Ungueltige Auswahl. Bitte waehle 1 bis 4.\n");
         }
 
-    }while(choice != 4)
+    }while(choice != 4);
 
     return 0;
 }
 
-void printfMainMenu() {
-    printf("\nTODO-LIST Verwaltung\n");
-    printf("1. Aufgaben anzeigen\n");
-    printf("2. Aufgabe hinzufuegen\n");
-    printf("3. Aufgabe löschen\n");
-    printf("4. Programm beenden\n");
-}
+
 
 int loadTasks(Task tasks[]) {
     printf("TODO: loadTasks implementieren");
 }
 
-void listTasks(Task tasks[, int taskCount]) {
+void listTasks(Task tasks[], int taskCount) {
     printf("TOD: listTasks implementieren");
 }
 
 int addTask(Task tasks[], int taskCount) {
     printf("TODO: addTask implementieren");
+    return taskCount;
 }
 
 int deleteTask(Task tasks[], int taskCount) {
